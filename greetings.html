@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>ÇáÊÍíÇÊ - Howdy English</title>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCGN3QQWVJ"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XCGN3QQWVJ');
+</script>
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2200363624984381"
+crossorigin="anonymous"></script>
+
+<style>
+html{ font-size:130%; }
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction:rtl;
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:linear-gradient(160deg,#1e3c72,#2a5298);
+  color:#f0f8ff;
+  align-items:center;
+  overflow-x:hidden;
+}
+
+/* ÚäæÇä */
+.live-title{
+  font-size:2.5rem;
+  font-weight:bold;
+  text-align:center;
+  margin:2rem 0;
+  color:#00ffcc;
+}
+
+/* ÃÒÑÇÑ Zoom */
+.zoom-controls{text-align:center;margin-bottom:1rem;}
+.zoom-controls button{
+  font-size:1rem;
+  padding:0.5rem 1rem;
+  margin:0 0.5rem;
+  border-radius:10px;
+  border:none;
+  background:linear-gradient(135deg,#ff416c,#ff4b2b);
+  color:white;
+  cursor:pointer;
+}
+
+/* ÇáäÕæÕ */
+p{
+  font-family:'Comic Sans MS',cursive;
+  color:#FFD700;
+  text-shadow:1px 1px 2px #000;
+  margin:0.6rem 0;
+  font-size:1.1rem;
+}
+
+h3.chalk{
+  color:#0f0;
+  text-shadow:0 0 10px #0ff;
+  margin-top:1.5rem;
+}
+
+/* İíÏíæ */
+.video{margin:2rem 0;text-align:center;}
+.video img{
+  max-width:100%;
+  cursor:pointer;
+  border-radius:20px;
+  transition:transform 0.3s;
+}
+.video img:hover{transform:scale(1.05);}
+
+/* İŞÇÚÇÊ */
+#bubble-container-left,#bubble-container-right{
+  position:fixed;
+  top:0;
+  width:3rem;
+  height:100%;
+  pointer-events:none;
+  overflow:hidden;
+}
+#bubble-container-left{left:0;}
+#bubble-container-right{right:0;}
+.bubble-tube{
+  position:absolute;
+  bottom:0;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(200,160,255,0.8), rgba(138,43,226,0.5));
+  animation:rise 10s linear infinite;
+}
+@keyframes rise{
+0%{transform:translateY(0);}
+100%{transform:translateY(-110vh);}
+}
+
+a{color:white;text-decoration:none;margin-top:2rem;}
+</style>
+</head>
+
+<body>
+
+<div id="bubble-container-left"></div>
+<div id="bubble-container-right"></div>
+
+<h1 class="live-title">ÇáÊÍíÇÊ - Greetings</h1>
+
+<div class="zoom-controls">
+<button onclick="zoomText(1)">Zoom +</button>
+<button onclick="zoomText(-1)">Zoom -</button>
+</div>
+
+<!-- ÇáãÍÊæì -->
+<h3 class="chalk">1?? ÇáÊÍíÇÊ ÇáíæãíÉ ÇáÚÇãÉ</h3>
+<p>Hello ? ãÑÍÈÇğ</p>
+<p>Hi ? ÃåáÇğ</p>
+<p>Hey ? åÇí</p>
+<p>Good morning ? ÕÈÇÍ ÇáÎíÑ</p>
+<p>Good evening ? ãÓÇÁ ÇáÎíÑ</p>
+<p>How are you? ? ßíİ ÍÇáß¿</p>
+
+<h3 class="chalk">2?? ÊÍíÇÊ ÛíÑ ÑÓãíÉ</h3>
+<p>Yo ? åÇí</p>
+<p>Sup ? ãÇ ÇáÃÎÈÇÑ¿</p>
+<p>Howdy ? ãÑÍÈÇğ</p>
+
+<h3 class="chalk">3?? ÊÍíÇÊ ÑÓãíÉ</h3>
+<p>Greetings ? ÊÍíÉ ÑÓãíÉ</p>
+<p>Pleased to meet you ? ÓÚíÏ ÈáŞÇÆß</p>
+
+<h3 class="chalk">4?? ÊÍíÇÊ æÏÇÚ</h3>
+<p>Bye ? æÏÇÚÇğ</p>
+<p>See you later ? ÃÑÇß áÇÍŞÇğ</p>
+<p>Take care ? ÇÚÊäö ÈäİÓß</p>
+
+<!-- İíÏíæ -->
+<div class="video">
+<a href="https://www.youtube.com/watch?v=NrQUvUcNsnw&t=14s" target="_blank">
+<img src="https://img.youtube.com/vi/NrQUvUcNsnw/hqdefault.jpg">
+</a>
+<p>ÇÖÛØ áãÔÇåÏÉ ÇáİíÏíæ</p>
+</div>
+
+<!-- ÒÑ ÑÌæÚ -->
+<a href="index.html">? ÇáÚæÏÉ ááÕİÍÉ ÇáÑÆíÓíÉ</a>
+
+<script>
+function zoomText(scale){
+  var elements=document.querySelectorAll('p,h3');
+  elements.forEach(function(el){
+    var style=window.getComputedStyle(el,null).getPropertyValue('font-size');
+    var currentSize=parseFloat(style);
+    el.style.fontSize=(currentSize+scale*2)+'px';
+  });
+}
+
+/* İŞÇÚÇÊ */
+function createSideBubble(container){
+  const bubble=document.createElement('div');
+  bubble.classList.add('bubble-tube');
+  const size=Math.random()*15+10;
+  bubble.style.width=size+'px';
+  bubble.style.height=size+'px';
+  bubble.style.left=Math.random()*(container.offsetWidth-size)+'px';
+  container.appendChild(bubble);
+  setTimeout(()=>{ bubble.remove(); }, 10000);
+}
+setInterval(()=>{
+  createSideBubble(document.getElementById('bubble-container-left'));
+  createSideBubble(document.getElementById('bubble-container-right'));
+},400);
+</script>
+
+</body>
+</html>
